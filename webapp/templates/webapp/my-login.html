@@ -2,15 +2,14 @@
 
 {% load crispy_forms_tags %}
 
+
 {% block content %}
 
     <body>
 
         <div class="container bg-light shadow-md p-5 form-layout">
 
-            <h3> Create your account </h3>
-
-            <h5> Start managing your clients today! </h5>
+            <h3> Login to your account </h3>
 
             <hr>
             <br>
@@ -23,15 +22,11 @@
 
                 <br>
 
-                {{form.password1|as_crispy_field}}
+                {{form.password|as_crispy_field}}
 
                 <br>
 
-                {{form.password2|as_crispy_field}}
-
-                <br>
-
-                <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Create account &nbsp; <i class="fa fa-user" aria-hidden="true"></i> </button>
+                <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Login &nbsp; <i class="fa fa-key" aria-hidden="true"></i> </button>
 
 
             </form>
@@ -40,7 +35,7 @@
 
             <div class="text-center">
 
-                <p> Already have an account? </p> <a href="{% url 'my-login' %}"> Login </a>
+                <p> Don't have an account? </p> <a href="{% url 'register' %}"> Register </a>
 
             </div>
 
@@ -51,5 +46,11 @@
 
     </body>
 
-
 {% endblock %}
+
+
+
+
+
+
+
